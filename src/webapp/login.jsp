@@ -32,5 +32,11 @@
     <input type="submit" value="提交">
 </form>
 
+<form action="/body1" method="post">
+    id:<input type="text" name="id"><br>
+    name:<input type="text" name="name"><br>
+    <input type="submit" value="对象">
+</form>
+
 </body>
 </html>
