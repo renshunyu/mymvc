@@ -1,5 +1,6 @@
 package com.rensy.mymvc.controller;
 
+import com.rensy.mymvc.pojo.Person;
 import com.rensy.mymvc.pojo.User;
 import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
 import org.springframework.stereotype.Controller;
@@ -41,5 +42,10 @@ public class ViewController {
     @RequestMapping("/body1")
     public String body1(User user){
         return user.toString();
+    }
+    @ResponseBody
+    @RequestMapping("/body2")
+    public String body1(Person person){
+        return person.toString();
     }
 }

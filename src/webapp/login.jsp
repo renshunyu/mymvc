@@ -38,5 +38,13 @@
     <input type="submit" value="对象">
 </form>
 
+<form action="/body2" method="post">
+    id:<input type="text" name="id"><br>
+    name:<input type="text" name="name"><br>
+    city:<input type="text" name="address.city">
+    street:<input type="text" name="address.street">
+    <input type="submit" value="对象">
+</form>
+
 </body>
 </html>
