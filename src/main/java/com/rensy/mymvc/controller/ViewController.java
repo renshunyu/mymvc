@@ -1,0 +1,38 @@
+package com.rensy.mymvc.controller;
+
+import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+public class ViewController {
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
+    @RequestMapping(value="/get/{id}",method = RequestMethod.GET)
+    @ResponseBody
+    public String get(@PathVariable(value = "id")  String id){
+        return "get"+id;
+    }
+    @RequestMapping(value="/post",method = RequestMethod.POST)
+    @ResponseBody
+    public String post(){
+        return "post";
+    }
+    @RequestMapping(value="/put",method = RequestMethod.PUT)
+    @ResponseBody
+    public String put(){
+        return "put";
+    }
+    @RequestMapping(value="/delete/{id}",method = RequestMethod.DELETE)
+    @ResponseBody
+    public String delete( @PathVariable("id") String id){
+        return "delete"+id;
+    }
+    @ResponseBody
+    @RequestMapping("/body")
+    public String body(@RequestParam(value= "id",required = true) String id , String name){
+        return "id="+id+"name="+name;
+    }
+}
