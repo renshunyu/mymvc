@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Map;
 
 @Controller
 public class ViewController {
@@ -74,6 +75,12 @@ public class ViewController {
         modelAndView.addObject("name","tom");
         modelAndView.setViewName("jsp/modelandview");
         return modelAndView;
+    }
+    @RequestMapping("/map")
+    public String map(Map map){
+        map.put("name","admin");
+        map.put("age",123);
+        return "jsp/map";
     }
 
 

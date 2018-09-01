@@ -59,6 +59,7 @@
 <form action="/modelAndView" method="get">
     <input type="submit" value="modelAndView">
 </form>
+<a href="/map">map</a>
 
 
 </body>
