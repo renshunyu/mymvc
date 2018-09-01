@@ -4,6 +4,8 @@ import com.rensy.mymvc.pojo.Person;
 import com.rensy.mymvc.pojo.User;
 import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -81,6 +83,18 @@ public class ViewController {
         map.put("name","admin");
         map.put("age",123);
         return "jsp/map";
+    }
+    @RequestMapping("/model")
+    public String model(Model model){
+        model.addAttribute("name","admin");
+        model.addAttribute("age",123);
+        return "jsp/model";
+    }
+    @RequestMapping("/modelmap")
+    public String modelMap(ModelMap modelMap){
+        modelMap.addAttribute("name","admin");
+        modelMap.addAttribute("age",123);
+        return "jsp/modelmap";
     }
 
 

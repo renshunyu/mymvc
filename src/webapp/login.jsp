@@ -60,6 +60,9 @@
     <input type="submit" value="modelAndView">
 </form>
 <a href="/map">map</a>
+<a href="/model">model</a>
+<a href="/modelmap">modelmap</a>
+
 
 
 </body>
