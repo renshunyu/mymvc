@@ -53,6 +53,10 @@
 <form action="/cookie" method="get">
     <input type="submit" value="对象">
 </form>
+<form action="/servlet" method="get">
+    <input type="submit" value="servlet">
+</form>
+
 
 </body>
 </html>

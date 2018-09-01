@@ -6,6 +6,7 @@ import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -60,4 +61,13 @@ public class ViewController {
     public String cookie(@CookieValue(value = "JSESSIONID") String s){
         return s;
     }
+
+    @ResponseBody
+    @RequestMapping("/servlet")
+    public String servlet(HttpServletRequest httpServletRequest){
+        httpServletRequest.setAttribute("asdas","sdf");
+        return "${sessionScope.get(\"asdas\")}";
+    }
+
+
 }
