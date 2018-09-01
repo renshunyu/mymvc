@@ -5,6 +5,7 @@ import com.rensy.mymvc.pojo.User;
 import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -67,6 +68,12 @@ public class ViewController {
     public String servlet(HttpServletRequest httpServletRequest){
         httpServletRequest.setAttribute("asdas","sdf");
         return "${sessionScope.get(\"asdas\")}";
+    }
+    @RequestMapping("/modelAndView")
+    public ModelAndView modelAndView(ModelAndView modelAndView){
+        modelAndView.addObject("name","tom");
+        modelAndView.setViewName("jsp/modelandview");
+        return modelAndView;
     }
 
 

@@ -56,6 +56,9 @@
 <form action="/servlet" method="get">
     <input type="submit" value="servlet">
 </form>
+<form action="/modelAndView" method="get">
+    <input type="submit" value="modelAndView">
+</form>
 
 
 </body>
