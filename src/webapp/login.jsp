@@ -71,6 +71,16 @@
     <input type="submit" value="SessionAttributes">
 </form>
 
+<form action="/modelattribute" method="post">
+    id:<input type="text" name="id">
+    name:<input type="text" name="name">
+    <input type="submit" value="modelattributes">
+</form>
+<form action="/modelattribute1" method="post">
+    id:<input type="text" name="id">
+    name:<input type="text" name="name">
+    <input type="submit" value="modelattributes1">
+</form>
 
 </body>
 </html>

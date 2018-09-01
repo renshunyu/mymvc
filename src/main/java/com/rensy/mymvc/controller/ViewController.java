@@ -1,5 +1,6 @@
 package com.rensy.mymvc.controller;
 
+import com.rensy.mymvc.pojo.Account;
 import com.rensy.mymvc.pojo.Address;
 import com.rensy.mymvc.pojo.Person;
 import com.rensy.mymvc.pojo.User;
@@ -109,6 +110,29 @@ public class ViewController {
 
         return "jsp/address";
 
+    }
+    @ResponseBody
+    @RequestMapping("/modelattribute")
+    public String modelattribute(@ModelAttribute(value = "asd") Account account){
+
+        return account.toString();
+    }
+    @ModelAttribute
+    public void setup(Map map){
+        Account account = new Account("as","dfg","2018");
+        map.put("asd",account);
+    }
+
+    @ResponseBody
+    @RequestMapping("/modelattribute1")
+    public String modelattribute1(@ModelAttribute(value = "da") Account account){
+
+        return account.toString();
+    }
+    @ModelAttribute("da")
+    public Account setup1(Map map){
+        Account account = new Account("as","dfg","2018");
+        return account;
     }
 
 
