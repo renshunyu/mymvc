@@ -46,5 +46,13 @@
     <input type="submit" value="对象">
 </form>
 
+<form action="/header" method="get">
+    <input type="submit" value="会话">
+</form>
+
+<form action="/cookie" method="get">
+    <input type="submit" value="对象">
+</form>
+
 </body>
 </html>

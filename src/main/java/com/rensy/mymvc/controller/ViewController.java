@@ -6,6 +6,8 @@ import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class ViewController {
     @RequestMapping("/login")
@@ -47,5 +49,15 @@ public class ViewController {
     @RequestMapping("/body2")
     public String body1(Person person){
         return person.toString();
+    }
+    @ResponseBody
+    @RequestMapping("/header")
+    public String header(@RequestHeader(value = "Accept") String s){
+        return s;
+    }
+    @ResponseBody
+    @RequestMapping("/cookie")
+    public String cookie(@CookieValue(value = "JSESSIONID") String s){
+        return s;
     }
 }
