@@ -1,10 +1,8 @@
 package com.rensy.mymvc.controller;
 
 import com.rensy.mymvc.pojo.Account;
-import com.rensy.mymvc.pojo.Address;
 import com.rensy.mymvc.pojo.Person;
 import com.rensy.mymvc.pojo.User;
-import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
@@ -136,7 +133,7 @@ public class ViewController {
     }
     @RequestMapping("/lang")
     public String lang(){
-        return "lang";
+        return "jsp/lang";
     }
 
 
