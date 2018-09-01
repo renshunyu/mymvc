@@ -63,7 +63,7 @@
 <a href="/model">model</a>
 <a href="/modelmap">modelmap</a>
 <a href="/lang">国际化</a>
-<%--<a href="/lang2">配置文件配置映射测试</a>--%>
+<a href="/lang2">配置文件配置映射测试</a>
 
 <form action="/SessionAttributes" method="post">
     id:<input type="text" name="id"><br>

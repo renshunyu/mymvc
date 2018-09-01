@@ -12,6 +12,7 @@
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="lang"></property>
     </bean>
-    <!--<mvc:view-controller path="/lang2" view-name="jsp/lang"></mvc:view-controller>-->
+    <mvc:view-controller path="/lang2" view-name="jsp/lang"></mvc:view-controller>
+    <mvc:annotation-driven></mvc:annotation-driven>
 
 </beans>
