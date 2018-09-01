@@ -1,5 +1,6 @@
 package com.rensy.mymvc.controller;
 
+import com.rensy.mymvc.pojo.Address;
 import com.rensy.mymvc.pojo.Person;
 import com.rensy.mymvc.pojo.User;
 import com.sun.org.glassfish.external.probe.provider.annotations.ProbeParam;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
+@SessionAttributes(value = {"name"})
 public class ViewController {
     @RequestMapping("/login")
     public String login(){
@@ -95,6 +97,18 @@ public class ViewController {
         modelMap.addAttribute("name","admin");
         modelMap.addAttribute("age",123);
         return "jsp/modelmap";
+    }
+    @RequestMapping("/SessionAttributes")
+    public String sessionAttributes(Model model,String name){
+        model.addAttribute("name",name);
+        return "jsp/sessionattributes";
+
+    }
+    @RequestMapping("/address")
+    public String address(){
+
+        return "jsp/address";
+
     }
 
 

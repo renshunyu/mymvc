@@ -63,6 +63,13 @@
 <a href="/model">model</a>
 <a href="/modelmap">modelmap</a>
 
+<form action="/SessionAttributes" method="post">
+    id:<input type="text" name="id"><br>
+    name:<input type="text" name="name"><br>
+    city:<input type="text" name="address.city">
+    street:<input type="text" name="address.street">
+    <input type="submit" value="SessionAttributes">
+</form>
 
 
 </body>
