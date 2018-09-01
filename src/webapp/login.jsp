@@ -5,7 +5,7 @@
   Time: 9:31
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
 <head>
     <title>Title</title>
@@ -62,6 +62,7 @@
 <a href="/map">map</a>
 <a href="/model">model</a>
 <a href="/modelmap">modelmap</a>
+<a href="/lang">国际化</a>
 
 <form action="/SessionAttributes" method="post">
     id:<input type="text" name="id"><br>

@@ -126,13 +126,17 @@ public class ViewController {
     @ResponseBody
     @RequestMapping("/modelattribute1")
     public String modelattribute1(@ModelAttribute(value = "da") Account account){
-
+        System.out.println(account.toString());
         return account.toString();
     }
     @ModelAttribute("da")
     public Account setup1(Map map){
         Account account = new Account("as","dfg","2018");
         return account;
+    }
+    @RequestMapping("/lang")
+    public String lang(){
+        return "lang";
     }
 
 
